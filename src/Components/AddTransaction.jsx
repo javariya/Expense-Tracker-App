@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function AddTransaction() {
+
+    const [description, setDescription]= useState();
+    const [transactionAmount, setTransactionAmount]= useState();
 
     return(
         <div>
@@ -8,11 +11,13 @@ function AddTransaction() {
             <form>
                 <div>
                     <label htmlFor='description'> Description</label>
-                    <input type="text" id="description" placeholder="describe purpose of transaction"/>
+                    <input type="text" id="description" placeholder="describe purpose of transaction" value={description}
+                    onChange={(e) => setDescription(e.target.value)}/>
                 </div>
                 <div>
                     <label htmlFor="amount"> Amount</label>
-                    <input type="number" id="amount" placeholder="Enter Your Amount"/>
+                    <input type="number" id="amount" placeholder="Enter Your Amount" value={transactionAmount}
+                    onChange={(e) => setTransactionAmount(e.target.value)}/>
                 </div>
                 <button className="Add-btn"> Add Transaction</button>
             </form>
