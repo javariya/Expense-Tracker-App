@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import {GlobalContext} from '../Context/GlobalContext';
+import {Transaction} from '../Components/transaction';
 
 function TransactionHistory() {
 
@@ -10,12 +11,11 @@ function TransactionHistory() {
         <div>
             <h3>Transaction History</h3>
             <ul className="list">
-                <li className="plusValue">
-                    Project 1
-                    <span>$1000</span>
-                    <button className="delete-btn">X</button>
-
-                </li>
+                {
+                    transactions.map(transaction => (
+                        <Transaction key={transaction.id} transaction={transaction} />
+                    ))
+                }
                 <li className="minusValue">
                     Bill 1
                     <span>$200</span>
