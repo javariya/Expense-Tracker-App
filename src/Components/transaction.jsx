@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Transaction = () => {
+export const Transaction = ({transaction}) => {
 
     return (
         <li className="plusValue">
-                    {Transaction.description}
-                    <span>{Transaction.transactionAmount}</span>
+                    {transaction.description}
+                    <span>{transaction.transactionAmount}</span>
                     <button className="delete-btn">X</button>
 
                 </li>

@@ -10,20 +10,15 @@ function TransactionHistory() {
 
         <div>
             <h3>Transaction History</h3>
-            <ul className="list">
+            <li className="list">
                 {
                     transactions.map(transaction => (
                         <Transaction key={transaction.id} transaction={transaction} />
                     ))
                 }
-                <li className="minusValue">
-                    Bill 1
-                    <span>$200</span>
-                    <button className="delete-btn">X</button>
+               
 
-                </li>
-
-            </ul>
+            </li>
         </div>
     );
 

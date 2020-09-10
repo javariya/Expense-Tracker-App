@@ -14,3 +14,32 @@
   color: white;
 }
 
+.account-summary-container {
+  background-color: #fff6;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+}
+
+.account-summary-container > div{
+  flex: 1;
+  text-align: center;
+}
+
+.account-summary-container > div:first-of-type{
+  border-right: 1px solid #dedede;
+}
+.addIncome {
+  color: #282c34;
+  font-weight: bold;
+  
+}
+
+.minusExpense {
+  color: #2da3ad;
+  font-weight: bold;
+}
+

@@ -8,13 +8,17 @@ const incomeStyle = {
 
 function AccountSummary() {
     return (
+        <div className= "account-summary-container">
         <div>
             <h3 style = {incomeStyle}>INCOME</h3>
-            <p style = {{color: "green"}}>$0.00</p>
+            <p className="addIncome"style = {{color: "green"}}>$0.00</p>
+        </div>
+        <div>
         
             <h3><span>EXPENSE</span></h3>
-            <p style= {{color: "red"}}>$0.00</p>
+            <p className="minusExpense"style= {{color: "red"}}>$0.00</p>
             
+        </div>
         </div>
     )
 }
